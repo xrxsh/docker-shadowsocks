@@ -11,3 +11,4 @@ RUN pip install shadowsocks==2.8.2
 
 # Configure container to run as an executable
 ENTRYPOINT ["/usr/local/bin/ssserver"]
+RUN -d -p 1984:1984 oddrationale/docker-shadowsocks -s 0.0.0.0 -p 1984 -k YKL940322 -m aes-256-cfb
